@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,19 +11,19 @@ export default function Navbar() {
           {/* Desktop Menu */}
           <ul className="hidden md:flex md:gap-20 bg-[#D6D7D7] py-2 px-5 rounded-xl shadow-xl font-darker text-xl">
             <li>
-              <a className="hover:text-white" href="#">
-                Lets Talk
-              </a>
+              <Link to={"/"} className="hover:text-white">
+                Home
+              </Link>
             </li>
             <li>
-              <a className="hover:text-white" href="#">
+              <Link to={"/about"} className="hover:text-white">
                 About Me
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="hover:text-white" href="#">
-                Portofolio
-              </a>
+              <Link to={"#"} className="hover:text-white">
+                Lets Talk
+              </Link>
             </li>
           </ul>
 
