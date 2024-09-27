@@ -1,10 +1,10 @@
 export default function Card() {
   return (
     <>
-      <div className="flex flex-col text-white justify-center items-center min-h-screen h-auto md:mb-0 mb-10">
+      <div className="flex flex-col text-white justify-center items-center min-h-screen h-auto md:mb-5 md:mt-5 mb-10">
         <img
-          className="md:max-w-3xl w-xl "
-          src="/bg/black-white-background-2.jpg"
+          className="md:max-w-3xl w-xl max-h-xl object-cover hover:shadow-xl hover:shadow-black/50 transition hover:delay-100"
+          src="/profile.jpg"
           alt=""
         />
         <h2 className="text-3xl font-poppins flex-col my-5 ">Title </h2>

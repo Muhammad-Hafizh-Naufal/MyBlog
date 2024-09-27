@@ -3,36 +3,31 @@ import { Link } from "react-router-dom";
 export default function Cards() {
   return (
     <>
-      <div className="flex flex-wrap gap-5 md:my-10 my-20 justify-center">
-        <article className="flex md:max-w-3xl  bg-white transition hover:shadow-xl">
-          <div className="rotate-180 p-2 [writing-mode:_vertical-lr]">
-            <time
-              datetime="2022-10-10"
-              className="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900"
-            >
-              <span>2024</span>
-              <span className="w-px flex-1 bg-gray-900/10"></span>
-              <span>Sep 26</span>
-            </time>
-          </div>
+      <div className="flex gap-5 justify-center items-center md:p-5 p-2 flex-wrap">
+        <article className="md:w-96 relative overflow-hidden rounded-lg shadow transition hover:shadow-lg">
+          <img
+            alt=""
+            src="/profile.jpg"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
 
-          <div className="hidden sm:block sm:basis-56">
-            <img
-              alt=""
-              src="/bg/black-white-background-2.jpg"
-              className="aspect-square h-full w-full object-cover"
-            />
-          </div>
+          <div className="relative bg-gradient-to-t from-gray-900/50 to-gray-900/25 pt-32 sm:pt-48 lg:pt-64">
+            <div className="p-4 sm:p-6">
+              <time
+                datetime="2022-10-10"
+                className="block text-xs text-white/90"
+              >
+                {" "}
+                27 Sep 2024{" "}
+              </time>
 
-          <div className="flex flex-1 flex-col justify-between">
-            <div className="border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-6">
-              <a href="#">
-                <h3 className="font-bold uppercase text-gray-900">
-                  Finding the right guitar for your style - 5 tips
+              <Link to={"/singlepage"}>
+                <h3 className="mt-0.5 text-lg font-poppins text-white">
+                  How to position your furniture for positivity
                 </h3>
-              </a>
+              </Link>
 
-              <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-700">
+              <p className="mt-2 line-clamp-3 text-sm/relaxed  text-white/95">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Recusandae dolores, possimus pariatur animi temporibus nesciunt
                 praesentium dolore sed nulla ipsum eveniet corporis quidem,
@@ -40,15 +35,6 @@ export default function Cards() {
                 nisi culpa eius atque dignissimos. Molestias explicabo corporis
                 voluptatem?
               </p>
-            </div>
-
-            <div className="sm:flex sm:items-end sm:justify-end">
-              <Link
-                to={"/singlepage"}
-                className="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
-              >
-                Read Blog
-              </Link>
             </div>
           </div>
         </article>
