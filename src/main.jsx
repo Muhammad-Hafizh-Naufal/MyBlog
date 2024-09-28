@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import SinglePage from "./views/SinglePage.jsx";
 import HomePage from "./views/HomePage.jsx";
 import AboutPage from "./views/AboutPage.jsx";
+import AddBlog from "./views/AddBlog.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -16,8 +17,12 @@ const router = createBrowserRouter([
     element: <AboutPage />,
   },
   {
-    path: "/singlepage",
+    path: "/blog/:id",
     element: <SinglePage />,
+  },
+  {
+    path: "/addblog",
+    element: <AddBlog />,
   },
 ]);
 
