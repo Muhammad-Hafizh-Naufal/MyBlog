@@ -15,17 +15,17 @@ export default function AboutPage() {
             </div>
             <div className="flex bg-gray-100 p-10">
               <div className="mb-auto mt-auto max-w-lg">
-                <h1 className="text-3xl uppercase">Muhammad Hafizh Naufal</h1>
+                <h1 className="text-3xl font-poppins uppercase">
+                  Muhammad Hafizh Naufal
+                </h1>
                 <p className="font-semibold mb-5">Full Stack Dev</p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                  Donec odio. Quisque volutpat mattis eros. Nullam malesuada
-                  erat ut turpis. Suspendisse urna nibh, viverra non, semper
-                  suscipit, posuere a, pede.
+                <p className="font-poppins text-justify">
+                  Kenalin Gua Muhammad Hafizh Naufal, teman-teman biasa memangil
+                  gua Hapis, Gua anak Fikti atau lebih tepatnya anak Jurusan
+                  Sistem Infomasi, Nahhh tujuan gua bikin web ini adalah sebagai
+                  tempat atau wadah gua untun mengumpulkan tugas dan project gua
+                  semasa kuliah cuy
                 </p>
-                {/* <button className="bg-black rounded-md py-3 px-7 mt-6 text-white">
-                    Email Me
-                  </button> */}
               </div>
             </div>
           </div>
