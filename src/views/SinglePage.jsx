@@ -4,12 +4,14 @@ import axios from "axios";
 import Navbar from "../components/Ui/Navbar";
 import Footer from "../components/Ui/Footer";
 import Card from "../components/Ui/Card";
+import { useNavigate } from "react-router-dom";
 
 export default function SingleBlogPost() {
   const [blog, setBlog] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const { id } = useParams();
+  const Navigate = useNavigate();
 
   useEffect(() => {
     getBlogPost();
@@ -40,12 +42,30 @@ export default function SingleBlogPost() {
     return <div>Blog post not found.</div>;
   }
 
+  const deleteblog = async (id) => {
+    try {
+      await axios.delete(`http://localhost:3000/blogs/${id}`);
+      // setBlog(null);
+      // getBlogPost();
+      alert("Blog post deleted successfully");
+      Navigate("/");
+    } catch (error) {
+      console.log("Error deleting blog post:", error);
+    }
+  };
+
   return (
     <div className="bg-radial-at-bottom bg-gradient-to-b from-ThirdColor to-SecondColor min-h-screen">
       <div>
         <img className="md:absolute md:block hidden" src="/circle.png" alt="" />
         <Navbar />
-        <Card title={blog.title} url={blog.url} content={blog.description} />
+        <Card
+          title={blog.title}
+          url={blog.url}
+          content={blog.description}
+          id={blog.id}
+          deleteblog={deleteblog}
+        />
         <Footer />
       </div>
     </div>

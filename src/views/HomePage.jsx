@@ -1,6 +1,7 @@
 import Navbar from "../components/Ui/Navbar";
 import Footer from "../components/Ui/Footer";
 import Content from "../components/Ui/Content";
+import Button from "../components/Ui/Button";
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
           />
           <Navbar />
           <Content />
+          <Button />
           <Footer />
         </div>
       </div>

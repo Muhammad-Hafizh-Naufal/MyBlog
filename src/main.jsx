@@ -1,11 +1,12 @@
-import { StrictMode } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { createRoot } from "react-dom/client";
+import { StrictMode } from "react";
+import "./index.css";
 import SinglePage from "./views/SinglePage.jsx";
 import HomePage from "./views/HomePage.jsx";
 import AboutPage from "./views/AboutPage.jsx";
 import AddBlog from "./views/AddBlog.jsx";
-import "./index.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import EditBlog from "./views/EditBlog.jsx";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/addblog",
     element: <AddBlog />,
+  },
+  {
+    path: "/edit/:id",
+    element: <EditBlog />,
   },
 ]);
 
