@@ -75,17 +75,6 @@ const BlogForm = () => {
             className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
           />
         </div>
-        {/* <div>
-          <label className="block text-sm font-medium text-gray-700">
-            URL Gambar
-          </label>
-          <input
-            type="url"
-            value=""
-            onChange={(e) => setImageUrl(e.target.value)}
-            className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
-          />
-        </div> */}
 
         {preview ? (
           <figure className="md:w-44">
